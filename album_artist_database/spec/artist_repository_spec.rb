@@ -1,10 +1,11 @@
 require 'artist_repository'
+require 'database_connection'
 
 RSpec.describe ArtistRepository do
 
     def reset_artist_table
         seed_sql = File.read('spec/seeds_artists.sql')
-        connection = PG.connect({ host: '127.0.0.1', dbname: 'music_library_test' })
+        connection = PG.connect( { host: '127.0.0.1', dbname: 'music_library_test' } )
         connection.exec(seed_sql)
     end
 

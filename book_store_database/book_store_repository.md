@@ -39,6 +39,7 @@ INSERT INTO books (title, author_name) VALUES ('Dance of Dragons', 'George RR Ma
 Run this SQL file on the database to truncate (empty) the table, and insert the seed data. Be mindful of the fact any existing records in the table will be deleted.
 
 psql -h 127.0.0.1 your_database_name < seeds_{table_name}.sql
+
 3. Define the class names
 Usually, the Model class name will be the capitalised table name (single instead of plural). The same name is then suffixed by Repository for the Repository class name.
 
@@ -54,6 +55,7 @@ end
 # (in lib/books_repository.rb)
 class BooksRepository
 end
+
 4. Implement the Model class
 Define the attributes of your Model class. You can usually map the table columns to the attributes of the class, including primary and foreign keys.
 
